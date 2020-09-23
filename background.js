@@ -1,9 +1,3 @@
-chrome.browserAction.onClicked.addListener(function (tab) {
-  openIncognito(tab.url)
-})
-
-
-
 chrome.tabs.onCreated.addListener(function (tab) {
   console.log('onCreated', tab)
   chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {

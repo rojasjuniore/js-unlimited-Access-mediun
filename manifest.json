@@ -1,20 +1,30 @@
 {
-    "manifest_version" : 2,
+    "manifest_version": 2,
     "name": "Unlimited Access",
-    "description" : "Get unlimited access to medium paid posts",
-    "version" :"0.1",
-
-    "background" : {
-        "scripts" : ["background.js"],
-        "persistent" : false
+    "description": "Get unlimited access to medium paid posts",
+    "version": "0.2",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
     },
-    "permissions" : [
+    "permissions": [
         "tabs",
         "cookies",
-        "https://medium.com/*"],
-    "browser_action": { "default_icon": "cookie.png"},
-    "content_scripts" : [{
-        "matches": ["https://*/*"],
-        "js" : ["content.js"]
-    }]
+        "https://medium.com/*"
+    ],
+    "browser_action": {
+        "default_icon": "cookie.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
 }
